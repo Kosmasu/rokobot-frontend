@@ -65,10 +65,10 @@ export default async function createMessage(req: NextApiRequest, res: NextApiRes
 
             // Handles Llama finished generating
             // Example: data: {"choices": [{"delta": {}, "finish_reason": "length", "index": 129}]}
-            const finishReason = parsed.choices?.[0]?.finish_reason;
+            const finishReason = parsed.choices?.[0]?.finish_reason
             if (finishReason && finishReason !== null) {
-              res.end();
-              return;
+              res.end()
+              return
             }
 
             const content = parsed.choices[0]?.delta?.content || ''
