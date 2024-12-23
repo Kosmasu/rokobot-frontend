@@ -17,11 +17,11 @@ type AudioFolderItem =
   | TestFolder
   | SocialIcon
   | {
-    type: 'bgm-control' | 'test-folder'
-    mediaId: string
-    mediaUrl: string
-    caption: string
-  }
+      type: 'bgm-control' | 'test-folder'
+      mediaId: string
+      mediaUrl: string
+      caption: string
+    }
 
 interface AudioFolderProps {
   isPlaying: boolean
@@ -537,14 +537,16 @@ const AudioFolder = ({ isPlaying, onToggleAudio }: AudioFolderProps) => {
               {/* Notch border */}
               <div
                 className="absolute top-0 right-0 pointer-events-none"
-                style={{
-                  '--slant': `${Math.min(20, Math.max(10, width * 0.05))}px`,
-                  width: 'var(--slant)',
-                  height: 'var(--slant)',
-                  borderTop: '1px solid #1E755C',
-                  borderRight: '1px solid #1E755C',
-                  transform: 'skew(45deg) translateX(-9px)'
-                } as React.CSSProperties}
+                style={
+                  {
+                    '--slant': `${Math.min(20, Math.max(10, width * 0.05))}px`,
+                    width: 'var(--slant)',
+                    height: 'var(--slant)',
+                    borderTop: '1px solid #1E755C',
+                    borderRight: '1px solid #1E755C',
+                    transform: 'skew(45deg) translateX(-9px)'
+                  } as React.CSSProperties
+                }
               />
 
               {/* Content container */}
