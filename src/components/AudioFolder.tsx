@@ -17,11 +17,11 @@ type AudioFolderItem =
   | TestFolder
   | SocialIcon
   | {
-      type: 'bgm-control' | 'test-folder'
-      mediaId: string
-      mediaUrl: string
-      caption: string
-    }
+    type: 'bgm-control' | 'test-folder'
+    mediaId: string
+    mediaUrl: string
+    caption: string
+  }
 
 interface AudioFolderProps {
   isPlaying: boolean
@@ -544,7 +544,7 @@ const AudioFolder = ({ isPlaying, onToggleAudio }: AudioFolderProps) => {
                   borderTop: '1px solid #1E755C',
                   borderRight: '1px solid #1E755C',
                   transform: 'skew(45deg) translateX(-9px)'
-                }}
+                } as React.CSSProperties}
               />
 
               {/* Content container */}
