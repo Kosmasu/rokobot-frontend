@@ -137,7 +137,7 @@ const AudioFolder = ({ isPlaying, onToggleAudio }: AudioFolderProps) => {
         const tweetsWithExtras: AudioFolderItem[] = [
           ...SOCIAL_ICONS,
           ...(audioTweets as Tweet[]),
-          { type: 'bgm-control', mediaId: 'bgm', mediaUrl: '/sounds/bgm.mp3' },
+          { type: 'bgm-control', mediaId: 'bgm', mediaUrl: '/sounds/bgm.mp3', caption: '' },
           ...TEST_FOLDERS
         ]
 
