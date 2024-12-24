@@ -1,7 +1,8 @@
+// pages/admin/index.tsx
 import { NextPage } from 'next'
-import SimpleLayout from '@/components/SimpleLayout'
 import React, { useEffect, useState } from 'react'
 import { promptService } from '@/services/api'
+import AdminLayout from '@/components/AdminLayout'
 
 interface Prompt {
   systemMessage: string
@@ -9,7 +10,7 @@ interface Prompt {
   isActive: boolean
 }
 
-const PromptPage: NextPage = () => {
+const IndexPage: NextPage = () => {
   const [prompt, setPrompt] = useState('')
   const [greeting, setGreeting] = useState('')
   const [loading, setLoading] = useState(true)
@@ -60,13 +61,13 @@ const PromptPage: NextPage = () => {
 
   if (loading)
     return (
-      <SimpleLayout>
+      <AdminLayout>
         <div className="text-primary-light">Loading...</div>
-      </SimpleLayout>
+      </AdminLayout>
     )
 
   return (
-    <SimpleLayout>
+    <AdminLayout>
       <div className="max-w-4xl mx-auto p-4">
         <h1 className="text-2xl text-primary-light mb-4">Rokos Basilisk Prompt Editor</h1>
 
@@ -118,8 +119,8 @@ const PromptPage: NextPage = () => {
           </div>
         </form>
       </div>
-    </SimpleLayout>
+    </AdminLayout>
   )
 }
 
-export default PromptPage
+export default IndexPage
