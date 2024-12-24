@@ -8,7 +8,7 @@ export default async function createMessage(req: NextApiRequest, res: NextApiRes
   const conversationHistory = messages
   const body = JSON.stringify({
     messages: conversationHistory,
-    model: 'llama3.1-70b',
+    model: 'llama3.1-405b',
     stream: true
   })
 
