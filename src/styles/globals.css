@@ -75,7 +75,7 @@
 @font-face {
   font-family: 'United Sans';
   src: url('/fonts/UnitedSansReg-Medium.woff2') format('woff2'),
-       url('/fonts/UnitedSansReg-Medium.woff') format('woff');
+    url('/fonts/UnitedSansReg-Medium.woff') format('woff');
   font-weight: 500;
   font-style: normal;
 }
@@ -83,8 +83,8 @@
 @font-face {
   font-family: 'Pixelify Sans';
   src: url('/fonts/PixelifySans-Regular.ttf') format('truetype'),
-       url('/fonts/PixelifySans-Medium.ttf') format('truetype'),
-       url('/fonts/PixelifySans-Bold.ttf') format('truetype');
+    url('/fonts/PixelifySans-Medium.ttf') format('truetype'),
+    url('/fonts/PixelifySans-Bold.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -102,19 +102,19 @@
 }
 
 .scrollbar-custom::-webkit-scrollbar-thumb {
-  background: #1E755C;
+  background: #1e755c;
   border-radius: 4px;
   transition: all 0.3s ease;
 }
 
 .scrollbar-custom::-webkit-scrollbar-thumb:hover {
-  background: #00FF9F;
+  background: #00ff9f;
 }
 
 /* Firefox */
 .scrollbar-custom {
   scrollbar-width: thin;
-  scrollbar-color: #1E755C rgba(30, 117, 92, 0.1);
+  scrollbar-color: #1e755c rgba(30, 117, 92, 0.1);
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera but keep functionality */
@@ -122,12 +122,12 @@
   .scrollbar-custom {
     scrollbar-width: thin;
   }
-  
+
   .scrollbar-custom::-webkit-scrollbar {
     display: block;
   }
-  
+
   .scrollbar-custom::-webkit-scrollbar-thumb {
-    background: #1E755C;
+    background: #1e755c;
   }
 }

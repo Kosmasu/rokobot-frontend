@@ -12,7 +12,11 @@ export function middleware(request: NextRequest) {
   }
 
   // If trying to access admin pages while not authenticated, redirect to login
-  if (request.nextUrl.pathname != '/admin/login' && request.nextUrl.pathname.startsWith('/admin') && !isAuthenticated) {
+  if (
+    request.nextUrl.pathname != '/admin/login' &&
+    request.nextUrl.pathname.startsWith('/admin') &&
+    !isAuthenticated
+  ) {
     return NextResponse.redirect(new URL('/admin/login', request.url))
   }
 

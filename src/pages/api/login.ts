@@ -13,7 +13,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   if (username === ADMIN_USERNAME && password === ADMIN_PASSWORD) {
     // Set the cookie directly
-    res.setHeader('Set-Cookie', `admin_auth=true; Path=/; HttpOnly; Max-Age=${60 * 60 * 24}; ${process.env.NODE_ENV === 'production' ? 'Secure;' : ''} SameSite=Strict`)
+    res.setHeader(
+      'Set-Cookie',
+      `admin_auth=true; Path=/; HttpOnly; Max-Age=${60 * 60 * 24}; ${
+        process.env.NODE_ENV === 'production' ? 'Secure;' : ''
+      } SameSite=Strict`
+    )
 
     return res.status(200).json({ success: true })
   }
